@@ -44,7 +44,8 @@ function closeModal() {
 }
 
 function claimPrize() {
- window.location.href = "t.me/vodemkka"
+    alert('Поздравляю!');
+    window.location.reload();
 
     closeModal();
 }
