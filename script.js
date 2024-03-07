@@ -6,14 +6,14 @@ function spinWheel() {
     let wheel = document.querySelector(".inner-wheel");
     let arrow = document.querySelector(".arrow");
 
-    let fixedPrizeIndex = 4; // Номер приза, который будет постоянным
+    let prizeCount = 7; // Количество призов
+    let randomPrizeIndex = Math.floor(Math.random() * prizeCount); // Генерация случайного индекса приза
 
     canSpin = false;
 
-    let deg = Math.floor(Math.random() * 360) + 360 * 5; 
+    let deg = Math.floor(Math.random() * 360) + 360 * 5;
 
     wheel.style.transition = "all 6s ease-out";
-
     wheel.style.transform = `rotate(${deg}deg)`;
 
     arrow.style.transition = "all 6s ease-out";
@@ -21,7 +21,7 @@ function spinWheel() {
 
     setTimeout(() => {
         canSpin = true;
-        showModal(fixedPrizeIndex);
+        showModal(randomPrizeIndex);
     }, 6000);
 }
 
@@ -49,3 +49,4 @@ function claimPrize() {
 
     closeModal();
 }
+
