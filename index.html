@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поздравления с 8 марта!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Поздравления с 8 марта!</h1>
+        <p>Покрутите колесо удачи, чтобы выиграть приз!</p>
+        <div class="wheel">
+            <div class="inner-wheel">
+                <div class="arrow" style="border-bottom-color: #9c5eaa;"></div>
+            </div>
+        </div>
+        <div class="spin" onclick="spinWheel()">Крутить!</div>
+    </div>
+                <div class="sec" style="background-image: url('images/prize1.jpg');" data-prize="images/prize1.jpg"></div>
+                <div class="sec" style="background-image: url('images/prize2.jpg');" data-prize="images/prize2.jpg"></div>
+                <div class="sec" style="background-image: url('images/prize3.jpg');" data-prize="images/prize3.jpg"></div>
+                <div class="sec" style="background-image: url('images/prize4.jpg');" data-prize="images/prize4.jpg"></div>
+                <div class="sec" style="background-image: url('images/prize5.jpg');" data-prize="images/prize5.jpg"></div>
+                <div class="sec" style="background-image: url('images/prize6.jpg');" data-prize="images/prize6.jpg"></div>
+                <div class="sec" style="background-image: url('images/prize7.jpg');" data-prize="images/prize7.jpg"></div>
+        </div>
+        <div class="prizes-panel">
+            <h2>Все призы, которые вы можете выиграть:</h2>
+            <ul class="prizes-list">
+                <li><img src="images/prize1.jpg" alt="Цветок в целлафване"> Цветок в целлафане</li>
+                <li><img src="images/prize2.jpg" alt="Кружка"> Кружка</li>
+                <li><img src="images/prize3.jpg" alt="Два литра пива"> Два литра пива</li>
+                <li><img src="images/prize4.jpg" alt="Коробка конфет"> Коробка конфет</li>
+                <li><img src="images/prize5.jpg" alt="Куни"> Куни</li>
+                <li><img src="images/prize6.jpg" alt="Кольцо"> Кольцо</li>
+                <li><img src="images/prize7.jpg" alt="Айфон"> Айфон</li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Вы выиграли приз!</h2>
+            <div class="prize-info">
+                <img src="" alt="Приз" class="prize-image">
+                <p class="prize-name"></p>
+            </div>
+            <button onclick="claimPrize()" class="claim-button">Забрать</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
