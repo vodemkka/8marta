@@ -10,17 +10,15 @@ function spinWheel() {
 
     canSpin = false;
 
-    let deg = Math.floor(Math.random() * 360) + 360 * 5; // Генерируем случайный угол
+    let deg = Math.floor(Math.random() * 360) + 360 * 5; 
 
     wheel.style.transition = "all 6s ease-out";
 
     wheel.style.transform = `rotate(${deg}deg)`;
 
-    // Вращаем стрелку
     arrow.style.transition = "all 6s ease-out";
     arrow.style.transform = `rotate(${deg}deg)`;
 
-    // По завершению анимации
     setTimeout(() => {
         canSpin = true;
         showModal(fixedPrizeIndex);
@@ -46,8 +44,7 @@ function closeModal() {
 }
 
 function claimPrize() {
-    // Добавьте здесь логику для забора приза
-    // Например, отправка запроса на сервер или что-то подобное
+ window.location.href = "t.me/vodemkka
 
     closeModal();
 }
